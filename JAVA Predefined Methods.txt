@@ -1,0 +1,391 @@
+Class AbstractAction
+1. void addPropertyChangeListener(PropertyChangeListener listener)
+Adds a PropertyChangeListener to the listener list.
+2. protected Object	clone()
+Clones the abstract action.
+3. protected void	firePropertyChange(String propertyName, Object oldValue, Object newValue)
+Supports reporting bound property changes.
+4. Object[]	getKeys()
+Returns an array of Objects which are keys for which values have been set for this AbstractAction, or null if no keys have values set.
+5. PropertyChangeListener[]	getPropertyChangeListeners()
+Returns an array of all the PropertyChangeListeners added to this AbstractAction with addPropertyChangeListener().
+6. Object	getValue(String key)
+Gets the Object associated with the specified key.
+7. boolean	isEnabled()
+Returns true if the action is enabled.
+8. void	putValue(String key, Object newValue)
+Sets the Value associated with the specified key.
+9. void	removePropertyChangeListener(PropertyChangeListener listener)
+Removes a PropertyChangeListener from the listener list.
+10. void setEnabled(boolean newValue)
+Sets whether the Action is enabled.
+
+Class AbstractBorder
+
+11. int	getBaseline(Component c, int width, int height)
+Returns the baseline.
+12. Component.BaselineResizeBehavior	getBaselineResizeBehavior(Component c)
+Returns an enum indicating how the baseline of a component changes as the size changes.
+13. Insets	getBorderInsets(Component c)
+This default implementation returns a new Insets object that is initialized by the getBorderInsets(Component,Insets) method.
+14. Insets getBorderInsets(Component c, Insets insets)
+Reinitializes the insets parameter with this Border's current Insets.
+15. static Rectangle	getInteriorRectangle(Component c, Border b, int x, int y, int width, int height)
+Returns a rectangle using the arguments minus the insets of the border.
+16. Rectangle getInteriorRectangle(Component c, int x, int y, int width, int height)
+This convenience method calls the static method.
+17. boolean	isBorderOpaque()
+This default implementation returns false.
+18. void paintBorder(Component c, Graphics g, int x, int y, int width, int height)
+This default implementation does no painting.
+
+Class AbstractCollection<E>
+
+19. boolean	add(E e)
+Ensures that this collection contains the specified element (optional operation).
+20. boolean	addAll(Collection<? extends E> c)
+Adds all of the elements in the specified collection to this collection (optional operation).
+21. void	clear()
+Removes all of the elements from this collection (optional operation).
+22. boolean	contains(Object o)
+Returns true if this collection contains the specified element.
+23. boolean	containsAll(Collection<?> c)
+Returns true if this collection contains all of the elements in the specified collection.
+24. boolean	isEmpty()
+Returns true if this collection contains no elements.
+25. abstract Iterator<E>	iterator()
+Returns an iterator over the elements contained in this collection.
+26. boolean	remove(Object o)
+Removes a single instance of the specified element from this collection, if it is present (optional operation).
+27. boolean	removeAll(Collection<?> c)
+Removes all of this collection's elements that are also contained in the specified collection (optional operation).
+28. boolean	retainAll(Collection<?> c)
+Retains only the elements in this collection that are contained in the specified collection (optional operation).
+29. abstract int	size()
+Returns the number of elements in this collection.
+30. Object[]	toArray()
+Returns an array containing all of the elements in this collection.
+31. <T> T[]	toArray(T[] a)
+Returns an array containing all of the elements in this collection; the runtime type of the returned array is that of the specified array.
+32. String	toString()
+Returns a string representation of this collection.
+
+Class AddressHelper
+
+33. static String	extract(Any a) 
+34. static String	id() 
+35. static void	insert(Any a, String that) 
+36. static String	read(InputStream istream) 
+37. static TypeCode	type() 
+38. static void	write(OutputStream ostream, String value) 
+
+Class AbstractChronology
+
+39. int	compareTo(Chronology other)
+Compares this chronology to another chronology.
+40. boolean	equals(Object obj)
+Checks if this chronology is equal to another chronology.
+41. int	hashCode()
+A hash code for this chronology.
+42. ChronoLocalDate	resolveDate(Map<TemporalField,Long> fieldValues, ResolverStyle resolverStyle)
+Resolves parsed ChronoField values into a date during parsing.
+43. String	toString()
+Outputs this chronology as a String, using the chronology ID.
+
+Class AccessController
+
+44. static void	checkPermission(Permission perm)
+Determines whether the access request indicated by the specified permission should be allowed or denied, based on the current AccessControlContext and security policy.
+45. static <T> T	doPrivileged(PrivilegedAction<T> action)
+Performs the specified PrivilegedAction with privileges enabled.
+46. static <T> T	doPrivileged(PrivilegedAction<T> action, AccessControlContext context)
+Performs the specified PrivilegedAction with privileges enabled and restricted by the specified AccessControlContext.
+47. static <T> T	doPrivileged(PrivilegedAction<T> action, AccessControlContext context, Permission... perms)
+Performs the specified PrivilegedAction with privileges enabled and restricted by the specified AccessControlContext and with a privilege scope limited by specified Permission arguments.
+48. static <T> T	doPrivileged(PrivilegedExceptionAction<T> action)
+Performs the specified PrivilegedExceptionAction with privileges enabled.
+49. static <T> T	doPrivileged(PrivilegedExceptionAction<T> action, AccessControlContext context)
+Performs the specified PrivilegedExceptionAction with privileges enabled and restricted by the specified AccessControlContext.
+50. static <T> T	doPrivileged(PrivilegedExceptionAction<T> action, AccessControlContext context, Permission... perms)
+Performs the specified PrivilegedExceptionAction with privileges enabled and restricted by the specified AccessControlContext and with a privilege scope limited by specified Permission arguments.
+51. static <T> T	doPrivilegedWithCombiner(PrivilegedAction<T> action)
+Performs the specified PrivilegedAction with privileges enabled.
+52. static <T> T	doPrivilegedWithCombiner(PrivilegedAction<T> action, AccessControlContext context, Permission... perms)
+Performs the specified PrivilegedAction with privileges enabled and restricted by the specified AccessControlContext and with a privilege scope limited by specified Permission arguments.
+53. static <T> T	doPrivilegedWithCombiner(PrivilegedExceptionAction<T> action)
+Performs the specified PrivilegedExceptionAction with privileges enabled.
+54. static <T> T	doPrivilegedWithCombiner(PrivilegedExceptionAction<T> action, AccessControlContext context, Permission... perms)
+Performs the specified PrivilegedExceptionAction with privileges enabled and restricted by the specified AccessControlContext and with a privilege scope limited by specified Permission arguments.
+55. static AccessControlContext	getContext()
+This method takes a "snapshot" of the current calling context, which includes the current Thread's inherited AccessControlContext and any limited privilege scope, and places it in an AccessControlContext object.
+
+Class AccessibleState
+
+56. static AccessibleState	ACTIVE
+Indicates a window is currently the active window.
+57. static AccessibleState	ARMED
+Indicates that the object is armed.
+58. static AccessibleState	BUSY
+Indicates the current object is busy.
+59. static AccessibleState	CHECKED
+Indicates this object is currently checked.
+60. static AccessibleState	COLLAPSED
+Indicates this object is collapsed.
+61. static AccessibleState	EDITABLE
+Indicates the user can change the contents of this object.
+62. static AccessibleState	ENABLED
+Indicates this object is enabled.
+63. static AccessibleState	EXPANDABLE
+Indicates this object allows progressive disclosure of its children.
+64. static AccessibleState	EXPANDED
+Indicates this object is expanded.
+65. static AccessibleState	FOCUSABLE
+Indicates this object can accept keyboard focus, which means all events resulting from typing on the keyboard will normally be passed to it when it has focus.
+66. static AccessibleState	FOCUSED
+Indicates this object currently has the keyboard focus.
+67. static AccessibleState	HORIZONTAL
+Indicates the orientation of this object is horizontal.
+68. static AccessibleState	ICONIFIED
+Indicates this object is minimized and is represented only by an icon.
+69. static AccessibleState	INDETERMINATE
+Indicates that the object state is indeterminate.
+70. static AccessibleState	MANAGES_DESCENDANTS
+Indicates this object is responsible for managing its subcomponents.
+71. static AccessibleState	MODAL
+Indicates something must be done with this object before the user can interact with an object in a different window.
+72. static AccessibleState	MULTI_LINE
+Indicates this (text) object can contain multiple lines of text
+73. static AccessibleState	MULTISELECTABLE
+Indicates this object allows more than one of its children to be selected at the same time.
+74. static AccessibleState	OPAQUE
+Indicates this object paints every pixel within its rectangular region.
+75. static AccessibleState	PRESSED
+Indicates this object is currently pressed.
+76. static AccessibleState	RESIZABLE
+Indicates the size of this object is not fixed.
+77. static AccessibleState	SELECTABLE
+Indicates this object is the child of an object that allows its children to be selected, and that this child is one of those children that can be selected.
+78. static AccessibleState	SELECTED
+Indicates this object is the child of an object that allows its children to be selected, and that this child is one of those children that has been selected.
+79. static AccessibleState	SHOWING
+Indicates this object, the object's parent, the object's parent's parent, and so on, are all visible.
+80. static AccessibleState	SINGLE_LINE
+Indicates this (text) object can contain only a single line of text
+81. static AccessibleState	TRANSIENT
+Indicates this object is transient.
+82. static AccessibleState	TRUNCATED
+A state indicating that text is truncated by a bounding rectangle and that some of the text is not displayed on the screen.
+83. static AccessibleState	VERTICAL
+Indicates the orientation of this object is vertical.
+84. static AccessibleState	VISIBLE
+Indicates this object is visible.
+
+Class ActivationGroup
+
+85. protected void	activeObject(ActivationID id, MarshalledObject<? extends Remote> mobj)
+This protected method is necessary for subclasses to make the activeObject callback to the group's monitor.
+86. abstract void	activeObject(ActivationID id, Remote obj)
+The group's activeObject method is called when an object is exported (either by Activatable object construction or an explicit call to Activatable.exportObject.
+87. static ActivationGroup	createGroup(ActivationGroupID id, ActivationGroupDesc desc, long incarnation)
+Create and set the activation group for the current VM.
+88. static ActivationGroupID	currentGroupID()
+Returns the current activation group's identifier.
+89. static ActivationSystem	getSystem()
+Returns the activation system for the VM.
+90. protected void	inactiveGroup()
+This protected method is necessary for subclasses to make the inactiveGroup callback to the group's monitor.
+91. boolean	inactiveObject(ActivationID id)
+The group's inactiveObject method is called indirectly via a call to the Activatable.inactive method.
+92. static void	setSystem(ActivationSystem system)
+Set the activation system for the VM.
+
+Class BasicAttribute
+
+93. void	add(int ix, Object attrVal)
+Adds an attribute value to the ordered list of attribute values.
+94. boolean	add(Object attrVal)
+Adds a new value to this attribute.
+95. void	clear()
+Removes all values from this attribute.
+96. Object	clone()
+Creates and returns a copy of this object.
+97. boolean	contains(Object attrVal)
+Determines whether a value is in this attribute.
+98. boolean	equals(Object obj)
+Determines whether obj is equal to this attribute.
+99. Object	get()
+Retrieves one of this attribute's values.
+100. Object	get(int ix)
+Retrieves the attribute value from the ordered list of attribute values.
+101. NamingEnumeration<?>	getAll()
+Retrieves an enumeration of this attribute's values.
+102. DirContext	getAttributeDefinition()
+Retrieves this attribute's schema definition.
+103. DirContext	getAttributeSyntaxDefinition()
+Retrieves the syntax definition associated with this attribute.
+104. String	getID()
+Retrieves the id of this attribute.
+105. int	hashCode()
+Calculates the hash code of this attribute.
+106. boolean	isOrdered()
+Determines whether this attribute's values are ordered.
+107. Object	remove(int ix)
+Removes an attribute value from the ordered list of attribute values.
+108. boolean	remove(Object attrval)
+Removes a specified value from this attribute.
+109. Object	set(int ix, Object attrVal)
+Sets an attribute value in the ordered list of attribute values.
+110. int	size()
+Retrieves the number of values in this attribute.
+111. String	toString()
+Generates the string representation of this attribute.
+
+Class BasicLabelUI
+
+112. static ComponentUI	createUI(JComponent c)
+Returns an instance of BasicLabelUI.
+113. int	getBaseline(JComponent c, int width, int height)
+Returns the baseline.
+114. Component.BaselineResizeBehavior	getBaselineResizeBehavior(JComponent c)
+Returns an enum indicating how the baseline of the component changes as the size changes.
+115. Dimension	getMaximumSize(JComponent c)
+Returns the specified component's maximum size appropriate for the look and feel.
+116. Dimension	getMinimumSize(JComponent c)
+Returns the specified component's minimum size appropriate for the look and feel.
+117. Dimension	getPreferredSize(JComponent c)
+Returns the specified component's preferred size appropriate for the look and feel.
+118. protected void	installComponents(JLabel c)
+Registers components.
+119. protected void	installDefaults(JLabel c)
+Installs default properties.
+120. protected void	installKeyboardActions(JLabel l)
+Registers keyboard actions.
+121. protected void	installListeners(JLabel c)
+Registers listeners.
+122. void	installUI(JComponent c)
+Configures the specified component appropriately for the look and feel.
+123. protected String	layoutCL(JLabel label, FontMetrics fontMetrics, String text, Icon icon, Rectangle viewR, Rectangle iconR, Rectangle textR)
+Forwards the call to SwingUtilities.layoutCompoundLabel().
+124. void	paint(Graphics g, JComponent c)
+Paints the label text with the foreground color, if the label is opaque then paints the entire background with the background color.
+125. protected void	paintDisabledText(JLabel l, Graphics g, String s, int textX, int textY)
+Paint clippedText at textX, textY with background.lighter() and then shifted down and to the right by one pixel with background.darker().
+126. protected void	paintEnabledText(JLabel l, Graphics g, String s, int textX, int textY)
+Paint clippedText at textX, textY with the labels foreground color.
+127. void	propertyChange(PropertyChangeEvent e)
+This method gets called when a bound property is changed.
+128. protected void	uninstallComponents(JLabel c)
+Unregisters components.
+129. protected void	uninstallDefaults(JLabel c)
+Uninstalls default properties.
+130. protected void	uninstallKeyboardActions(JLabel c)
+Unregisters keyboard actions.
+131. protected void	uninstallListeners(JLabel c)
+Unregisters listeners.
+132. void	uninstallUI(JComponent c)
+Reverses configuration which was done on the specified component during installUI.
+
+Class BorderFactory
+
+133. static Border	createBevelBorder(int type)
+Creates a beveled border of the specified type, using brighter shades of the component's current background color for highlighting, and darker shading for shadows.
+134. static Border	createBevelBorder(int type, Color highlight, Color shadow)
+Creates a beveled border of the specified type, using the specified highlighting and shadowing.
+135. static Border	createBevelBorder(int type, Color highlightOuter, Color highlightInner, Color shadowOuter, Color shadowInner)
+Creates a beveled border of the specified type, using the specified colors for the inner and outer highlight and shadow areas.
+136. static CompoundBorder	createCompoundBorder()
+Creates a compound border with a null inside edge and a null outside edge.
+137. static CompoundBorder	createCompoundBorder(Border outsideBorder, Border insideBorder)
+Creates a compound border specifying the border objects to use for the outside and inside edges.
+138. static Border	createDashedBorder(Paint paint)
+Creates a dashed border of the specified paint.
+139. static Border	createDashedBorder(Paint paint, float length, float spacing)
+Creates a dashed border of the specified paint, relative length, and relative spacing.
+140. static Border	createDashedBorder(Paint paint, float thickness, float length, float spacing, boolean rounded)
+Creates a dashed border of the specified paint, thickness, line shape, relative length, and relative spacing.
+141. static Border	createEmptyBorder()
+Creates an empty border that takes up no space.
+142. static Border	createEmptyBorder(int top, int left, int bottom, int right)
+Creates an empty border that takes up space but which does no drawing, specifying the width of the top, left, bottom, and right sides.
+143. static Border	createEtchedBorder()
+Creates a border with an "etched" look using the component's current background color for highlighting and shading.
+144. static Border	createEtchedBorder(Color highlight, Color shadow)
+Creates a border with an "etched" look using the specified highlighting and shading colors.
+145. static Border	createEtchedBorder(int type)
+Creates a border with an "etched" look using the component's current background color for highlighting and shading.
+146. static Border	createEtchedBorder(int type, Color highlight, Color shadow)
+Creates a border with an "etched" look using the specified highlighting and shading colors.
+147. static Border	createLineBorder(Color color)
+Creates a line border withe the specified color.
+148. static Border	createLineBorder(Color color, int thickness)
+Creates a line border with the specified color and width.
+149. static Border	createLineBorder(Color color, int thickness, boolean rounded)
+Creates a line border with the specified color, thickness, and corner shape.
+150. static Border	createLoweredBevelBorder()
+Creates a border with a lowered beveled edge, using brighter shades of the component's current background color for highlighting, and darker shading for shadows.
+151. static Border	createLoweredSoftBevelBorder()
+Creates a beveled border with a lowered edge and softened corners, using brighter shades of the component's current background color for highlighting, and darker shading for shadows.
+152. static MatteBorder	createMatteBorder(int top, int left, int bottom, int right, Color color)
+Creates a matte-look border using a solid color.
+153. static MatteBorder	createMatteBorder(int top, int left, int bottom, int right, Icon tileIcon)
+Creates a matte-look border that consists of multiple tiles of a specified icon.
+154. static Border	createRaisedBevelBorder()
+Creates a border with a raised beveled edge, using brighter shades of the component's current background color for highlighting, and darker shading for shadows.
+155. static Border	createRaisedSoftBevelBorder()
+Creates a beveled border with a raised edge and softened corners, using brighter shades of the component's current background color for highlighting, and darker shading for shadows.
+156. static Border	createSoftBevelBorder(int type)
+Creates a beveled border of the specified type with softened corners, using brighter shades of the component's current background color for highlighting, and darker shading for shadows.
+157. static Border	createSoftBevelBorder(int type, Color highlight, Color shadow)
+Creates a beveled border of the specified type with softened corners, using the specified highlighting and shadowing.
+158. static Border	createSoftBevelBorder(int type, Color highlightOuter, Color highlightInner, Color shadowOuter, Color shadowInner)
+Creates a beveled border of the specified type with softened corners, using the specified colors for the inner and outer edges of the highlight and the shadow areas.
+159. static Border	createStrokeBorder(BasicStroke stroke)
+Creates a border of the specified stroke.
+160. static Border	createStrokeBorder(BasicStroke stroke, Paint paint)
+Creates a border of the specified stroke and paint.
+161. static TitledBorder	createTitledBorder(Border border)
+Creates a new titled border with an empty title, the specified border object, the default text position (determined by the current look and feel), the default justification (leading), and the default font and text color (determined by the current look and feel).
+162. static TitledBorder	createTitledBorder(Border border, String title)
+Adds a title to an existing border, with default positioning (determined by the current look and feel), default justification (leading) and the default font and text color (determined by the current look and feel).
+163. static TitledBorder	createTitledBorder(Border border, String title, int titleJustification, int titlePosition)
+Adds a title to an existing border, with the specified positioning and using the default font and text color (determined by the current look and feel).
+164. static TitledBorder	createTitledBorder(Border border, String title, int titleJustification, int titlePosition, Font titleFont)
+Adds a title to an existing border, with the specified positioning and font, and using the default text color (determined by the current look and feel).
+165. static TitledBorder	createTitledBorder(Border border, String title, int titleJustification, int titlePosition, Font titleFont, Color titleColor)
+Adds a title to an existing border, with the specified positioning, font and color.
+166. static TitledBorder	createTitledBorder(String title)
+Creates a new titled border with the specified title, the default border type (determined by the current look and feel), the default text position (determined by the current look and feel), the default justification (leading), and the default font and text color (determined by the current look and feel).
+167.String intern()
+168.String replace(char oldChar, char newChar)
+169.String replace(CharSequence target, CharSequence replacement)
+170.String replaceAll(String regex, String replacement)
+171.String replaceFirst(String regex, String replacement)
+172.String[] split(String regex)
+173.String[] split(String regex, int limit)
+174.String substring(int beginIndex)
+175.String substring(int beginIndex, int endIndex
+176.String toLowerCase()
+177.String toLowerCase(Locale locale)
+178.String toString()
+179.String toUpperCase()
+180.String toUpperCase(Locale locale)
+181.String trim()
+182.void exit(int status)
+183.long freeMemory()
+184.void gc() 
+185.static Runtime getRuntime()
+186.void halt(int status)
+187.void load(String filename)
+188.void loadLibrary(String libname)
+189.long maxMemory()
+190.boolean removeShutdownHook(Thread hook)
+191.void runFinalization()
+192.static void	runFinalizersOnExit(boolean value)
+193.long totalMemory()
+194.void traceInstructions(boolean on)
+195.void traceMethodCalls(boolean on)
+196.boolean	equals(Object anObject)
+197.boolean	equalsIgnoreCase(String anotherString)
+198.boolean	contains(CharSequence s)
+199.boolean	contentEquals(CharSequence cs)
+200.boolean	contentEquals(StringBuffer sb)
